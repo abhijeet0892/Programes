@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+void main()
+{
+    int i, n;
+    int t1=0, t2=1;
+    int nextTerm=t1+t2;
+    
+    printf("enter the number of terms- ");
+    scanf("%d", &n);
+    
+    printf("fibonacci series- %d, %d, ", t1, t2);
+    
+    for(i=3;i<=n; ++i)
+    {
+        printf("%d, ", nextTerm);
+        t1=t2;
+        t2=nextTerm;
+        nextTerm=t1+t2;
+    }
+}
+
+---------------------------------------------------------------------------
+
+#include <stdio.h>
+
+void main()
+{
+    int t1=0, t2=1, nextTerm=0, n;
+    printf("enter any number- ");
+    scanf("%d", &n);
+    
+    printf("fibonacci series- %d, %d, ", t1, t2);
+    nextTerm=t1+t2;
+    while(nextTerm<=n)
+    {
+        printf("%d, ", nextTerm);
+        t1=t2;
+        t2=nextTerm;
+        nextTerm=t1+t2;
+    }
+}

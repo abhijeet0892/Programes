@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void main()
+{
+    int n,res=0,rem;
+
+    printf("\n enter any number: ");
+    scanf("%d", &n);
+    while(n>0)
+    {
+        rem=n%10;
+        res=res+rem;
+        n=n/10;
+    }
+    printf("addition of digit: %d", res);
+}

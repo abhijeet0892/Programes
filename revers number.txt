@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+void main()
+{
+    int i, rev=0, r;
+    printf("enter any number- ");
+    scanf("%d", &i);
+    while(i!=0)
+    {
+        r=i%10;
+        rev=rev*10+r;
+        i/=10;
+    }
+    printf("reversed number = %d", rev);
+}

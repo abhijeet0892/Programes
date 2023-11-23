@@ -1,0 +1,73 @@
+#include <stdio.h>
+
+void Add1();
+void Add2(int, int);
+int Add3();
+int Add4(int, int);
+
+void main()
+{
+    int a,b,c,ch;
+    printf("\n 1. function with no return value & no parameters.");
+    printf("\n 2. function with no return value & parameters.");
+    printf("\n 3. function with return value & no parameters.");
+    printf("\n 4. function with return value & parameters.");
+    printf("\n 5. exit");
+    
+    do{
+        printf("\n enter your choice to perform addition with different functions: ");
+        scanf("%d", &ch);
+        
+        switch(ch)
+        {
+            case 1:
+                    Add1();
+                    break;
+            case 2:
+                    printf("\n enter 2 numbers: ");
+                    scanf("%d%d", &a,&b);
+                    Add2(a,b);
+                    break;
+            case 3:
+                    c=Add3();
+                    printf("\n addition : %d", c);
+                    break;
+            case 4:
+                    printf("\n enter 2 numbers: ");
+                    scanf("%d%d", &a,&b);
+                    c=Add4(a,b);
+                    printf("\n addition : %d", c);
+                    break;
+            case 5:
+                    exit(0);
+            default:
+                    printf("\n enter correct choice between 1 to 5.");
+                    break;
+        }
+    }while(ch<=5);
+}
+void Add1()
+{
+    int m,n;
+    printf("\n enter any 2 numbers: ");
+    scanf("%d%d", &m,&n);
+    printf("\n addition: %d", (m+n));
+}
+
+void Add2(int m, int n)
+{
+    printf("\n addition: %d", (m+n));
+}
+
+int Add3()
+{
+    int m,n;
+    printf("\n enter any 2 numbers: ");
+    scanf("%d%d", &m,&n);
+    return(m+n);
+}
+
+int Add4(int m, int n)
+{
+    return(m+n);
+}
